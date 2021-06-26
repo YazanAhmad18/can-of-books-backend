@@ -12,20 +12,19 @@ const userModel = mongoose.model('users', userSchema);
 
 const seedUserData = () => {
     const newUser = new userModel({
-        email: 'yazan-ahmed1999a@outlook.com',
+        email: 'yazanahmad1999187@gmail.com',
         books: [
-            { name: 'CSS ' , description:'web', status:'Available'},
-            { name: 'JS' , description:'web', status:'Available'},
-            { name: 'html' , description:'web', status:'Available'}
+            { name: 'php' , description:'For web', status:'Available' , url : 'https://m.media-amazon.com/images/I/41WqNryqTlL.jpg'},
+            { name: 'css' , description:'For web', status:'Available' , url : 'https://static.packt-cdn.com/products/9781787281585/cover/smaller'},
+            { name: 'js' , description:'For web', status:'Available' , url : 'https://www.tripwiremagazine.com/wp-content/uploads/2016/10/Introducing-html_thumb.jpg'}
         ]
     });
 
     console.log(newUser);
 
     newUser.save();
-
 }
 
 // seedUserData();
 
-module.exports = userModel;
+module.exports = {userModel , seedUserData};
